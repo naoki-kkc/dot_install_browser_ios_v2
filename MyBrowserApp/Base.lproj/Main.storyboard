@@ -32,10 +32,22 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P93-Cq-9Td">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="←" id="Abx-Z0-4vy"/>
-                                    <barButtonItem title="→" id="QMO-q2-SYu"/>
+                                    <barButtonItem title="←" id="Abx-Z0-4vy">
+                                        <connections>
+                                            <action selector="goBack:" destination="BYZ-38-t0r" id="B2w-c8-mJV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="→" id="QMO-q2-SYu">
+                                        <connections>
+                                            <action selector="goFoward:" destination="BYZ-38-t0r" id="pOa-if-J4G"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Ewx-qx-UUY"/>
-                                    <barButtonItem systemItem="refresh" id="hS9-ed-GPf"/>
+                                    <barButtonItem systemItem="refresh" id="hS9-ed-GPf">
+                                        <connections>
+                                            <action selector="reload:" destination="BYZ-38-t0r" id="8bV-38-gFO"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -54,6 +66,13 @@
                             <constraint firstItem="aQb-Ur-LA0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="vPB-hZ-aO6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="Abx-Z0-4vy" id="O67-Yb-4X2"/>
+                        <outlet property="browserWebView" destination="1Yi-EM-eQa" id="0RI-4W-tEO"/>
+                        <outlet property="fowardButton" destination="QMO-q2-SYu" id="ahZ-6T-lv5"/>
+                        <outlet property="reloadButton" destination="hS9-ed-GPf" id="56n-5X-ffI"/>
+                        <outlet property="urlTextField" destination="aQb-Ur-LA0" id="iPT-5N-emB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
