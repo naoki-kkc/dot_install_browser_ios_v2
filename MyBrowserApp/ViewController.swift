@@ -17,7 +17,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var reloadButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let urlString = "http://dotinstall.com"
+        let urlRequest = URLRequest(url: URL(string: urlString)!)
+        self.browserWebView.load(urlRequest)
     }
     @IBAction func goBack(_ sender: Any) {
     }
